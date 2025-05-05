@@ -10,8 +10,7 @@ load_dotenv()
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 if "selected_model" not in st.session_state:
-    selected_model = "gemini-1.5-flash"
-    st.session_state["selected_model"] = selected_model
+    st.session_state["selected_model"] = "gemini-1.5-flash"
 
 llm = ChatGoogleGenerativeAI(model=st.session_state["selected_model"])
        
