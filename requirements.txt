@@ -7,6 +7,9 @@ webdataset
 streamlit-mic-recorder
 gTTS
 pydub
+torch
+torchaudio
+soundfile
 transformers
 phonemizer
 Levenshtein
