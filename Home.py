@@ -6,6 +6,9 @@ st.image("images/speakable_logo.png", caption="")
 
 if st.session_state.get("show_success", False):
     st.session_state.show_success = True  
+    
+if "selected_model" not in st.session_state:
+    st.session_state["selected_model"] = "gemini-1.5-flash"
 
 @st.cache_data(show_spinner="Downloading dependencies...")
 def install_dependencies():
