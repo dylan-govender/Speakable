@@ -61,7 +61,7 @@ else:
         height=300
     )
 
-@st.cache_resource(show_spinner="Loading speech model...")
+@st.cache_resource(show_spinner="Loading speech model... Please be patient.")
 def load_model_ipa_model():
     processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft")
     model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft")
@@ -72,8 +72,7 @@ load_dotenv()
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 if "selected_model" not in st.session_state:
-    selected_model = "gemini-1.5-pro"
-    st.session_state["selected_model"] = selected_model
+    st.session_state["selected_model"] = "gemini-1.5-flash"
 
 llm = ChatGoogleGenerativeAI(model=st.session_state["selected_model"])
 
