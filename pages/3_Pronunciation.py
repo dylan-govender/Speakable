@@ -127,7 +127,6 @@ def phonemize_audio(audio):
 def generate_content_str(human, ipa, non_matching):
     contents = []
     for tag, i1, i2, j1, j2 in non_matching:
-        # print(tag, human[i1:i2], ipa[j1:j2])
         if tag == 'equal':
             contents.append(('equal',human[i1:i2]))
         elif tag == 'replace':
