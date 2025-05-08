@@ -1,5 +1,7 @@
 # Speakable
 
+Submission for the /execute: AI Genesis Hackathon.
+
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://speakable.streamlit.app/)
 
 ### How to run it on your own machine
